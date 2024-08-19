@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Timmie's Portfolio</title>
+    <link rel="stylesheet" href="{{url_for('static', filename='style.css')}}">
+</head>
+<body>
+    <header>
+        <h1>Timmie's Portfolio</h1>
+        <nav>
+            <ul>
+                <!--Empty href so we can make onClick features-->
+                <li><a href="#" onclick="showTab('about-me')">About me</a></li>
+                <li><a href="#" onclick="showTab('worked-on')">What I worked on</a></li>
+                <li><a href="#" onclick="showTab('social-links')">Social Links</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <!--About me-->
+        <div id="about-me" class="tab-content">
+            <div class="insideAboutMe">
+                <div class="text-container">
+                    <h2>About Me</h2>
+                    <p>Im an educated computer scientist that loves a good challenge, and learns from experience 
+                        instead of reading. Im a full stack programmer and have worked with many diffrent languages and frameworks. <br><br>
+
+                        Some of these are: <br>
+                        - HTML <br>
+                        - CSS <br>
+                        - Java <br>
+                        - JavaScript <br>
+                        - React <br>
+                        - Python <br>
+                        - Typescript <br>
+                    </p>
+                </div>
+                <div class="image-container">
+                    <img class="IMGmig" src="{{ url_for('static', filename='Images/mig.png') }}" alt="Image 1">
+                </div>
+                
+            </div>
+        </div>
+        
+
+        <!-- Worked on Section -->
+        <div id="worked-on" class="tab-content" style="display: none;">
+            <h2>What I Worked On</h2>
+            <p>Here's every project that i find revelant to present, all with information about the project itself and snippets of functionality. Just click one of the buttons to open a modal with more info about them.</p>
+            <div class="button-container">
+                <!-- Online Chatroom Button Box -->
+                <div class="button-box">
+                    <button onclick="openModal('modal1')">Online Chatroom</button>
+                </div>
+                <!-- Social Vibes Exam Project Button Box -->
+                <div class="button-box">
+                    <button onclick="openModal('modal2')">Social Vibes Exam Project</button>
+                </div>
+
+            </div>
+        </div>
+
+            <div id="modal1" class="modal">
+                <div class="modal-content">
+                    <span class="close" onclick="closeModal('modal1')">&times;</span>
+                    <h1>Online Chatroom with realtime message updating</h1>
+                    <h3>This project was part of my third semesters mobile development exam where we had to
+                        make a program of our own choice. I made an online chatroom using Android Studio with
+                        a Firestore backend database.
+                    </h3>
+                    <h3>The project estimation took me around 2 weeks and is only made using Java</h3>
+
+                    <h3>How the app works is that the moment you launch it will ask for you name and log
+                        you in using that name with the help of the firestore. As you can see on the images there 
+                        is currently only one chatroom that anybody can use, and write inside as they please, where the newest message 
+                        is showed on the top.
+                        </h3>
+                    <img src="{{ url_for('static', filename='Images/OnlinechatroomIMG1.png') }}" alt="Image 1">
+                    <img src="{{ url_for('static', filename='Images/OnlinechatroomIMG2.png') }}" alt="Image 2">
+                    <br>
+                    
+                    <h3>When somebody adds a message it gets added to their own firestore storage collection, 
+                        this helps keep track of who sent what, with one of the collections being the main chat called "messages". 
+                        It has an extra variable that contains the time when every message was sent, so we can easily order the messages 
+                        and have the newest one in the top. </h3>
+                    <img class="last-image" src="{{ url_for('static', filename='Images/firestoreData.png') }}" alt="Image 2">
+                
+                    <h1>------------------------------------------------------------------------<h1>
+
+                        <a href="https://github.com/Healsu/OnlineChatRoom">Check it out here</a>
+
+                </div>
+            </div>
+            <div id="modal2" class="modal">
+                <div class="modal-content">
+                    <span class="close" onclick="closeModal('modal2')">&times;</span>
+                    <h1>Exam Project - Social Vibes messaging app</h1>
+                    <h3>For my final exam of my Computer Science education, i got tasked with 2 other people 
+                        to make a extension of the company "Social Vibes"s mobile app that could make events on 
+                        a google api map and working messaging services between multiple users. The company had 
+                        requirments in terms that the program needed to be worked on, such as flask python for the backend 
+                        and Typescript for the frontend. Besides that we had full creativity control codewise and designwise.
+                    </h3>
+                    <h3>This program was a 10 weeks project and was made using the requested tools, and for the management and storage of data 
+                        given and recieved we have used Firebase's Firestore storage. 
+                    </h3>
+
+                    <h3>Since the program is an extension of our customers app we implemented a simple start loging to 
+                        diverse the diffrent users and the chats/events they have created. </h3>
+                    <img src="{{ url_for('static', filename='Images/socialVibesLogin.PNG') }}" alt="Image 1">
+                
+
+                    <h3>When the user is then logged in they get the option to create a new chat with the + in the corner 
+                        or check on of their already existing chats. How that would work is just an automatic check depending how 
+                        many people you would make a chatroom with that determines if its a "chat" or a "groupchat". Where the last 
+                        thing is the community chat which was at this point made by the admins of the app [The Social Vibes team], and 
+                        worked as an extension of a groupchat with more features inside it.
+                    </h3>
+
+
+                    <img class="rowImages" src="{{ url_for('static', filename='Images/socialVibesChatpage.png') }}" alt="Image 2">
+                    <img class="rowImages" src="{{ url_for('static', filename='Images/socialVibesChatpage2.png') }}" alt="Image 2">
+                    <img class="rowImages" src="{{ url_for('static', filename='Images/socialVibesChatpage3.png') }}" alt="Image 2">
+
+                    <h3>For the second main feature implemented which was the function to create custom events, where you had 
+                        to be able to click on a google implemented map that would take the information and save it on the database in 
+                        your name with all the information given.
+                    </h3>
+                    <img src="{{ url_for('static', filename='Images/socialVibesEvents.png') }}" alt="Image 1">
+
+                    <h3>Important thing to know is that majority of the frontend information to work, you need 
+                        to run the backend code.</h3>
+                    <h1>------------------------------------------------------------------------<h1>
+                        
+                        <a href="https://github.com/JimmyKristensen/SocialVibesProject-frontend/tree/main">Check out the Frontend</a> <br>
+                        <a href="https://github.com/Healsu/OpgaveSocialVibes">Check out the Backend</a>
+
+                    <h3>If you want more information about the customer heres their website:  <a href="https://socialvibes.io">Social Vibes</a></h3>
+
+                </div>
+            </div>
+            <div id="modal3" class="modal">
+                <div class="modal-content">
+                    <span class="close" onclick="closeModal('modal3')">&times;</span>
+                    <p>This is the content of Modal 3.</p>
+                </div>
+            </div>
+
+        </div>
+        <div id="social-links" class="tab-content">
+            <h1>Social Links</h1>
+            <p>Find me on diffrent social medias:</p>
+            <div class="social-link">
+                <h2>LinkedIn</h2>
+                <a href="https://www.linkedin.com/in/timmie-bang-nielsen-8a0745249/" target="_blank">
+                    <img src="{{ url_for('static', filename='Images/icons/linkedinLogo.png') }}" alt="LinkedIn">
+                </a>
+            </div>
+            <div class="social-link">
+                <h2>Github</h2>
+                <a href="https://github.com/Healsu" target="_blank">
+                    <img src="{{ url_for('static', filename='Images/icons/gitIcon.png') }}" alt="LinkedIn">
+                </a>
+            </div>
+        </div>
+    </main>
+
+    <script>
+        function showTab(tabId) {
+            // Hide all tab contents
+            document.querySelectorAll('.tab-content').forEach(function(tab) {
+                tab.style.display = 'none';
+            });
+
+            // Show the selected tab content
+            document.getElementById(tabId).style.display = 'block';
+        }
+
+        function openModal(modalId) {
+            //Show Modal Content
+            document.getElementById(modalId).style.display = 'block';
+        }
+
+        function closeModal(modalId) {
+            //Close Modal Content
+            document.getElementById(modalId).style.display = 'none';
+        }
+
+        window.onload = function() {
+            // Show the About Me section by default
+            showTab('about-me');
+        };
+    </script>
+</body>
+</html>

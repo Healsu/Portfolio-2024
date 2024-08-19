@@ -1,0 +1,206 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+}
+h1 {
+    text-align-last: center;
+}
+
+h3 {
+    font-weight: normal;
+}
+
+
+nav {
+    text-align: center;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+}
+
+nav ul li:not(:last-child) {
+    border-right: 1px solid #fff; /* Added a border for better separation notice */
+    padding-right: 10px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #fff;
+    padding: 10px;
+}
+
+main {
+    padding: 20px;
+}
+
+.insideAboutMe {
+    display: flex;
+    align-items: center; /* Align items vertically */
+}
+
+.image-container {
+    flex: 1;
+    padding-right: 60px; /* Adjust as needed for spacing */
+    width: 50%; /* Set the width */
+    height: auto; /* Maintain aspect ratio */
+
+    /*outline-style: dashed;*/
+}
+
+.IMGmig {
+    width: 80%; /* Set the width */
+    height: auto; /* Maintain aspect ratio */
+}
+
+.text-container {
+    flex: 1;
+
+    /* outline-style: dashed;*/
+}
+.text-container p {
+   font-size: larger;
+}
+
+
+
+/* Button */
+/* Button styles */
+.button-container button {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: transparent; /* Transparent background */
+    border: 2px solid #4CAF50; /* Green border */
+    color: #4CAF50; /* Green text color */
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 0 5px; /* Adjust the margin as needed */
+    transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+    display: inline-block; /* Display the buttons as blocks */
+}
+
+/* Change button styles on hover */
+.button-container button:hover {
+    background-color: #4CAF50; /* Green background on hover */
+    color: white; /* White text color on hover */
+}
+
+
+.button-container button:hover {
+    background-color: #45a049;
+}
+
+.rowImages {
+    max-width: 400px; /* Adjust maximum width as needed */
+    height: 90%; /* Maintain aspect ratio */
+}
+
+
+/* Button Container */
+.button-container {
+    display: flex; 
+    flex-wrap: wrap; 
+    justify-content: space-between;
+}
+
+/* Button Box */
+.button-box {
+    background-color: #f0f0f0;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+    margin-bottom: 10px;
+    width: calc(30% - 10px); /*Honestly thx chatgpt for this suggestion*/
+}
+
+.button-box button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer; 
+    font-size: 16px;
+    color: #333; 
+    width: 100%;
+}
+
+
+/*-------------------------------------------*/
+
+/* The Modal */
+.modal {
+    display: none;
+    position: fixed; 
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%; 
+    overflow: auto; 
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0,0.4);
+}
+
+/* Modal Content*/
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+}
+.modal-content img.last-image {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto; 
+}
+/* Close Button */
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/*----------------------------------------------*/
+
+/* Social Links*/
+#social-links {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+#social-links p {
+    font-size: 18px; /* Adjust the font size as needed */
+}
+.social-link {
+    display: inline-block;
+    margin: 10px;
+}
+
+.social-link img {
+    width: 40px;
+    height: auto;
+}
