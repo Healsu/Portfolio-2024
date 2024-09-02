@@ -1,9 +1,6 @@
 # A Portfolio about me
-### Who im i?
-Hello my name is Timmie Bang Nielsen and this program is just a very short
-introduction of who i am and what i have worked on, during my time as a student on KEA (Københavns Erhversakademi) .
+### Who am i?
+Hello, my name is Timmie Bang Nielsen. This program provides a brief introduction to who I am and what I have worked on during my time as a student at KEA (Københavns Erhvervsakademi).
 
 ### How do i run it?
-Very simple when opening the program on your programming software (I use Visual
-Studio Code myself) use the terminal and first enter **"cd Portfolio"**. If you happen 
-to already be inside it just run **"python app.py"**
+It's very simple. When you open the program in your programming software (I use Visual Studio Code), open the terminal and enter **cd Portfolio**. If you are already in the correct directory, just run **python app.py**.
